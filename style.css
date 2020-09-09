@@ -6,19 +6,8 @@ button {
     cursor: pointer;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: blue;
-}
-
-.players {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    max-width: 1000px;
-    background-color: red;
+.grid {
+    display: grid;
 }
 
 .human {
