@@ -5,7 +5,6 @@ for (let i = 0; i < buttons.length; i++) {
 
 let playerTotal = 0;
 let compTotal = 0;
-let roundPara = document.querySelector('#round-text');
 
 function generateCompSelection() {
     let randomNumber = Math.floor((3 - 1 + 1) * Math.random()) + 1;
@@ -30,8 +29,9 @@ function playRound(e) {
     else if (playerSelection === 'Scissors' && compSelection === 'Scissors') { roundText = 'A draw!'; }
     else { roundText = 'none of the ifs';}
     // display the updated score ('playerTotal / compTotal')
+    document.querySelector('#score').textContent = playerTotal + ' / ' + compTotal;
     // display roundText
-    roundPara.textContent = roundText;
+    document.querySelector('#round-text').textContent = roundText;
     // display human selection big
     // display computer selection big
     // stop after someone gets 5 and display winnerText after (or instead of) roundText
