@@ -10,23 +10,25 @@
 </head>
 
 <body>
-  <div class="grid">
+  
   <h1>Rock Paper Scissors</h1>
   <p>Make your selection to play against the computer!</p>
-  
-  <div class="results">
-    <p>Score numbers</p>
-    <p>Round text</p>
-  </div>
-  
-  <div class="human">
-    <h3>Player</h3>
-    <!--Selection will go here-->
-  </div>
+    
+  <div class="grid">
+    <div class="results">
+      <p id="score">Score numbers</p>
+      <p id="round-text">Round text</p>
+    </div>
+    
+    <div class="human">
+      <h3>Player</h3>
+      <!--Selection will go here-->
+    </div>
 
-  <div class="computer">
-    <h3>Computer</h3>
-    <!--Selection will go here-->
+    <div class="computer">
+      <h3>Computer</h3>
+      <!--Selection will go here-->
+    </div>
   </div>
 
   <div class="buttons">
@@ -34,7 +36,8 @@
     <button id="Paper"><i class="far fa-hand-paper"></i><div>Paper</div></button>
     <button id="Scissors"><i class="far fa-hand-scissors"></i><div>Scissors</div></button>
   </div>
-  </div>
+  <button>Reset Game</button>
+  
 
   <script src="script.js"></script>
 </body>
