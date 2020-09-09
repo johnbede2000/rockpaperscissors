@@ -4,7 +4,6 @@ for (let i = 0; i < buttons.length; i++) {
 }
 
 function playRound(e) {
-    
     let playerSelection = this.id;
     let compSelection = generateCompSelection;
 
