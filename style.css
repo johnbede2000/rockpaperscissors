@@ -21,3 +21,8 @@ button {
     width: 50%;
     min-width: 320px;
 }
+
+#round-text {
+    width: 250px;
+    height: 250px;
+}

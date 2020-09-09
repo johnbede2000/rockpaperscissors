@@ -5,11 +5,18 @@ for (let i = 0; i < buttons.length; i++) {
 
 let playerTotal = 0;
 let compTotal = 0;
-let roundText = document.querySelector('#round-text');
+let roundPara = document.querySelector('#round-text');
+
+function generateCompSelection() {
+    let randomNumber = Math.floor((3 - 1 + 1) * Math.random()) + 1;
+    if (randomNumber === 1) { return 'Rock'; }
+    else if (randomNumber === 2) { return 'Paper'; }
+    else { return 'Scissors'; }
+}
 
 function playRound(e) {
     let playerSelection = this.id;
-    let compSelection = generateCompSelection;
+    let compSelection = generateCompSelection();
     let roundText = '';
 
     if (playerSelection === 'Rock' && compSelection === 'Rock') { roundText = 'A draw!'; }
@@ -21,18 +28,12 @@ function playRound(e) {
     else if (playerSelection === 'Scissors' && compSelection === 'Rock') { compTotal++; roundText = 'You lose! Rock beats scissors!'; }
     else if (playerSelection === 'Scissors' && compSelection === 'Paper') { playerTotal++; roundText = 'You win! Scissors beats paper!'; }
     else if (playerSelection === 'Scissors' && compSelection === 'Scissors') { roundText = 'A draw!'; }
-
+    else { roundText = 'none of the ifs';}
     // display the updated score ('playerTotal / compTotal')
     // display roundText
+    roundPara.textContent = roundText;
     // display human selection big
     // display computer selection big
     // stop after someone gets 5 and display winnerText after (or instead of) roundText
     // reset button triggers reset function
-}
-
-function generateCompSelection() {
-    let randomNumber = Math.floor((3 - 1 + 1) * Math.random()) + 1;
-    if (randomNumber === 1) { return 'Rock'; }
-    else if (randomNumber === 2) { return 'Paper'; }
-    else { return 'Scissors'; }
 }
