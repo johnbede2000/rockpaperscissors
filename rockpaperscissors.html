@@ -5,8 +5,33 @@
   <meta charset="UTF-8">
   <title>John Bede | Rock Paper Scissors</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/10e8632cd5.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <p>This game is going to be played completely from the console for now. Type <code>game()</code> in the console and press return to start a game.</p>
+  <h1>Rock Paper Scissors</h1>
+  <h2>Make your selection to play against the computer!</h2>
+  <div class="container">
+  <div class="players">
+    <div class="human">
+      <h3>Player</h3>
+      <button><i class="far fa-hand-rock"></i></button>
+      <button><i class="far fa-hand-paper"></i></button>
+      <button><i class="far fa-hand-scissors"></i></button>
+    </div>
+
+    <div class="computer">
+      <h3>Computer</h3>
+      <p id="compSelection"></p>
+    </div>
+  </div>
+  </div>
+  <div class="results">
+    <p>This text will update.</p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
+
+</html>

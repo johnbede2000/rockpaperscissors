@@ -1,0 +1,34 @@
+html {
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+}
+
+.players {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1000px;
+    background-color: red;
+}
+
+.human {
+    background-color: orange;
+    width: 50%;
+    min-width: 320px;
+}
+
+.computer {
+    background-color: pink;
+    width: 50%;
+    min-width: 320px;
+}

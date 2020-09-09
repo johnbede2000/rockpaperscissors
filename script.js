@@ -1,13 +1,10 @@
-function generateCompSelection() {
-    let randomNumber = Math.floor((3 - 1 + 1) * Math.random()) + 1;
-    if (randomNumber === 1) { return 'Rock'; }
-    else if (randomNumber === 2) { return 'Paper'; }
-    else { return 'Scissors'; }
+const buttons = document.querySelectorAll('button');
+for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener(click, playRound);
 }
 
 function playRound(playerSelection, compSelection) {
-    if (playerSelection !== null) {
-
+    let playerSelection = e.target;
     if (playerSelection.toUpperCase() === 'ROCK' && compSelection === 'Rock') { return 'A draw! Rock draws with rock'; }
     else if (playerSelection.toUpperCase() === 'ROCK' && compSelection === 'Paper') { compTotal++; return 'You lose! Paper beats rock'; }
     else if (playerSelection.toUpperCase() === 'ROCK' && compSelection === 'Scissors') { playerTotal++; return 'You win! Rock beats scissors'; }
@@ -17,14 +14,17 @@ function playRound(playerSelection, compSelection) {
     else if (playerSelection.toUpperCase() === 'SCISSORS' && compSelection === 'Rock') { compTotal++; return 'You lose! Rock beats scissors!'; }
     else if (playerSelection.toUpperCase() === 'SCISSORS' && compSelection === 'Paper') { playerTotal++; return 'You win! Scissors beats paper!'; }
     else if (playerSelection.toUpperCase() === 'SCISSORS' && compSelection === 'Scissors') { return 'A draw! Scissors draws with scissors!'; }
-    else { return 'Your selection was not recognised'; }
-    }
-    else {
-    return 'You cancelled';
-    }
 }
+
 let playerTotal = 0;
 let compTotal = 0;
+
+function generateCompSelection() {
+    let randomNumber = Math.floor((3 - 1 + 1) * Math.random()) + 1;
+    if (randomNumber === 1) { return 'Rock'; }
+    else if (randomNumber === 2) { return 'Paper'; }
+    else { return 'Scissors'; }
+}
 
 function game() {
     let playerSelection = prompt('Round 1/5! Enter your selection (rock, paper, or scissors)');
