@@ -98,13 +98,15 @@ function toggleHidden(currentValue) {
 }
 
 function reset() {
+    if (playerTotal === 5 || compTotal === 5) {
+        buttons.forEach(toggleHidden);
+        document.querySelector('#prompt').classList.toggle('hidden');
+    }
     playerTotal = 0;
     compTotal = 0;
     document.querySelector('#score').textContent = playerTotal + ' / ' + compTotal;
     document.querySelector('#human-current').className = "";
     document.querySelector('#comp-current').className = "";
     document.querySelector('#round-text').textContent = "";
-    buttons.forEach(toggleHidden);
-    document.querySelector('#prompt').classList.toggle('hidden');
 }
 document.querySelector('#reset').addEventListener('click', reset);
