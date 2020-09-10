@@ -1,18 +1,25 @@
 html {
     text-align: center;
+    box-sizing: border-box;
 }
 
 button {
     cursor: pointer;
 }
 
-.grid {
-    display: grid;
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .human {
     background-color: orange;
     width: 50%;
+    min-width: 320px;
+}
+
+.results {
     min-width: 320px;
 }
 
@@ -36,12 +43,14 @@ button {
     width: 250px;
     height: 250px;
     border: solid 1px black;
+    margin: 0 auto;
 }
 
 #comp-current {
     width: 250px;
     height: 250px;
     border: solid 1px black;
+    margin: 0 auto;
 }
 
 .rock-img {
@@ -60,4 +69,8 @@ button {
     background-image: url("images/scissors.svg");
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.hidden {
+    visibility: hidden;
 }
