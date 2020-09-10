@@ -18,7 +18,10 @@ function playRound(e) {
     let compSelection = generateCompSelection();
     let roundText = '';
 
-    if (playerSelection === 'Rock' && compSelection === 'Rock') { roundText = 'A draw!'; }
+    if (playerSelection === 'Rock' && compSelection === 'Rock') {
+        roundText = 'A draw!';
+        document.querySelector('#human-current').classList.add('rock-image'); 
+    }
     else if (playerSelection === 'Rock' && compSelection === 'Paper') { compTotal++; roundText = 'You lose! Paper beats rock'; }
     else if (playerSelection === 'Rock' && compSelection === 'Scissors') { playerTotal++; roundText = 'You win! Rock beats scissors'; }
     else if (playerSelection === 'Paper' && compSelection === 'Rock') { playerTotal++; roundText = 'You win! Paper beats rock'; }
@@ -27,13 +30,13 @@ function playRound(e) {
     else if (playerSelection === 'Scissors' && compSelection === 'Rock') { compTotal++; roundText = 'You lose! Rock beats scissors!'; }
     else if (playerSelection === 'Scissors' && compSelection === 'Paper') { playerTotal++; roundText = 'You win! Scissors beats paper!'; }
     else if (playerSelection === 'Scissors' && compSelection === 'Scissors') { roundText = 'A draw!'; }
-    else { roundText = 'none of the ifs';}
-    // display the updated score ('playerTotal / compTotal')
+    else { roundText = 'Oh... something went wrong!';}
+    
     document.querySelector('#score').textContent = playerTotal + ' / ' + compTotal;
-    // display roundText
+    
     document.querySelector('#round-text').textContent = roundText;
-    // display human selection big
-    // display computer selection big
+    // display human selection
+    // display computer selection
     // stop after someone gets 5 and display winnerText after (or instead of) roundText
     // reset button triggers reset function
 }

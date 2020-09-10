@@ -31,3 +31,27 @@ button {
     width: 100%;
     height: 3rem;
 }
+
+#human-current {
+    width: 250px;
+    height: 250px;
+    border: solid 1px black;
+}
+
+#comp-current {
+    width: 250px;
+    height: 250px;
+    border: solid 1px black;
+}
+
+.rock-image {
+    background-image: url("images/rock.svg");
+}
+
+.paper-image {
+    background-image: url("images/paper.svg");
+}
+
+.scissors-image {
+    background-image: url("images/paper.svg");
+}
