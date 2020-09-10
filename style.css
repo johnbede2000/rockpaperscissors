@@ -44,14 +44,20 @@ button {
     border: solid 1px black;
 }
 
-.rock-image {
+.rock-img {
     background-image: url("images/rock.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-.paper-image {
+.paper-img {
     background-image: url("images/paper.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-.scissors-image {
-    background-image: url("images/paper.svg");
+.scissors-img {
+    background-image: url("images/scissors.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
