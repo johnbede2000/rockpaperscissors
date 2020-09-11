@@ -10,37 +10,47 @@
 </head>
 
 <body>
-  
-  <h1>Rock Paper Scissors</h1>
-  <p>Human versus computer! Who will reach five points first?</p>
-    
-  <div class="flex">
+  <a class="home-link" href="../"><i class="fas fa-arrow-circle-left"></i> Home</a>
+  <div class="center-text">
+    <h1>Rock Paper Scissors</h1>
+    <p>Human versus computer! Who will reach five points first?</p>
 
-    <div class="human">
-      <h3>Player</h3>
-      <div id="human-current"></div>
-    </div>
+    <div class="flex">
 
-    <div class="results">
-      <div id="score"></div>
-      <div id="round-text"></div>
-    </div>
+      <div class="human">
+        <h3>Player</h3>
+        <div id="human-current"></div>
+      </div>
 
-    <div class="computer">
-      <h3>Computer</h3>
-      <div id="comp-current"></div>
+      <div class="results">
+        <div id="score"></div>
+        <div id="round-text"></div>
+      </div>
+
+      <div class="computer">
+        <h3>Computer</h3>
+        <div id="comp-current"></div>
+      </div>
+
     </div>
-    
+    <p id="prompt">Make your selection:</p>
+    <div class="buttons">
+      <button class="button" id="Rock"><i class="far fa-hand-rock"></i>
+        <div>Rock</div>
+      </button>
+      <button class="button" id="Paper"><i class="far fa-hand-paper"></i>
+        <div>Paper</div>
+      </button>
+      <button class="button" id="Scissors"><i class="far fa-hand-scissors"></i>
+        <div>Scissors</div>
+      </button>
+    </div>
+    <button id="reset">Reset Game</button>
   </div>
-  <p id="prompt">Make your selection:</p>
-  <div class="buttons">
-    <button class="button" id="Rock"><i class="far fa-hand-rock"></i><div>Rock</div></button>
-    <button class="button" id="Paper"><i class="far fa-hand-paper"></i><div>Paper</div></button>
-    <button class="button" id="Scissors"><i class="far fa-hand-scissors"></i><div>Scissors</div></button>
-  </div>
-  <button id="reset">Reset Game</button>
-  <audio id="win"><source src="sounds/win.wav" type="audio/wav"></audio>
-  <audio id="lose"><source src="sounds/lose.wav" type="audio/wav"></audio>
+  <audio id="win">
+    <source src="sounds/win.wav" type="audio/wav"></audio>
+  <audio id="lose">
+    <source src="sounds/lose.wav" type="audio/wav"></audio>
   <script src="script.js"></script>
 </body>
 
