@@ -14,7 +14,7 @@ button {
 }
 
 .human {
-    background-color: orange;
+    /* background-color: orange; */
     width: 50%;
     min-width: 320px;
 }
@@ -24,7 +24,7 @@ button {
 }
 
 .computer {
-    background-color: pink;
+    /* background-color: pink; */
     width: 50%;
     min-width: 320px;
 }

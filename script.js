@@ -81,13 +81,18 @@ function playRound(e) {
     document.querySelector('#round-text').textContent = roundText;
 }
 
+let winSound = document.querySelector('#win');
+let loseSound = document.querySelector('#lose');
+
 function checkForFive() {
     if (playerTotal === 5) {
         roundText = roundText + ' Game over! You win this game!';
+        winSound.play();
         buttons.forEach(toggleHidden);
         document.querySelector('#prompt').classList.toggle('hidden');
     } else if (compTotal === 5) {
         roundText = roundText + ' Game over! You lose this game! Try again';
+        loseSound.play();
         buttons.forEach(toggleHidden);
         document.querySelector('#prompt').classList.toggle('hidden');
     }
